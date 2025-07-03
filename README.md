@@ -25,7 +25,8 @@ Consumers should be able to incorporate your library into their build process wi
 
 3. There is code in the `executable` subdirectory that performs a dot product of two vectors manually.
 Modify the code in the `executable` subdirectory so that it instead uses your library.
-The executable should compile with CMake, and its `CMakeLists.txt` should not link against BLAS or Eigen explicitly.
+The executable should compile with CMake, and its `CMakeLists.txt` should not reference BLAS or Eigen.
+In other words, the executable should be agnostic with respect to the which dependency is used by your library.
 
 Hint: If you get errors during either the CMake configure process or the compile process for the executable, it may be due to a problem with your library’s CMake files.
 Look carefully at how your library links against BLAS / Eigen.
